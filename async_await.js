@@ -10,10 +10,19 @@ function melhorComida(comida) {
     })
 }
 
-melhorComida('pão').then((resposta) => {
-    console.log(resposta)
-}).catch((erro) => {
-    console.log(erro)
-})
 
-// then = então/ quando
+
+
+async function mostrarMelhorComida() {
+    try {
+        const melhorComidaResposta = await melhorComida('pão')
+        console.log(melhorComidaResposta)
+    } catch (error) {
+        console.log(error)
+    }
+        
+    
+   
+}
+
+mostrarMelhorComida()
